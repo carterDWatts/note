@@ -1,6 +1,6 @@
 # Note
 
-Jot a quick note under a title. Summarize later with claude.
+Jot a quick note under a title and summarize with claude.
 
 ## What it does
 
@@ -30,15 +30,13 @@ Ranges: `today`, `yesterday`, `this week`, `last week`, `this month`, `last mont
 
 ## Storage
 
-Notes live in `~/.note/<date>/<title>`, one file per title per day. Each line is `- [HH:MM] message`. Same title twice in a day appends to the same file.
+Notes live in `~/.note/<date>/<title>` with one file per title per day. Each line entry is formatted as `- [HH:MM] message`. Using the same title twice in a day appends the message to the same file.
 
 ```
 ~/.note/2026-06-09/standup
   - [09:14] shipped the frog renumber fix
   - [14:30] started on note plugin
 ```
-
-Plain text on purpose, so other tools can read it.
 
 ## Installation
 
@@ -62,6 +60,6 @@ Restart your shell after installation.
 
 ## Notes
 
-- Notes stored in `~/.note`, outside the repo
-- Override the location with `NOTE_DIR` before sourcing
+- Notes are stored in `~/.note`
+- Override the location by editing `NOTE_DIR` 
 - `note s` needs the `claude` CLI on your PATH
